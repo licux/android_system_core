@@ -269,10 +269,10 @@ bool FirstStageMount::MountPartitions() {
             PLOG(ERROR) << "Failed to setup verity for '" << fstab_rec->mount_point << "'";
             return false;
         }
-        if (fs_mgr_do_mount_one(fstab_rec)) {
-            PLOG(ERROR) << "Failed to mount '" << fstab_rec->mount_point << "'";
-            return false;
-        }
+        // if (fs_mgr_do_mount_one(fstab_rec)) {
+        //     PLOG(ERROR) << "Failed to mount '" << fstab_rec->mount_point << "'";
+        //     return false;
+        // }
     }
     return true;
 }
